@@ -19,7 +19,7 @@ class FlipkartScraper:
         }
 
         self.pages = pages
-        self.url = url
+        self.url = final_url
         self.session = HTMLSession()
 
     def iterate_over_pages(self) -> List[dict]:
@@ -239,13 +239,29 @@ class FlipkartScraper:
 
 
 if __name__ == '__main__':
-    url = input("Paste Product Review Page URL here: ")
-    print(url)
+    user_url = input("Paste Product Review Page URL here: ")
+    index = user_url.find("FLIPKART")
+    if index != -1:
+        shorturl = user_url[:index + len("FLIPKART")]
+    else:
+        shorturl = user_url
+
+    parts = shorturl.split("/")
+    if len(parts) >= 5:
+        parts[4] = parts[4].replace("p", "product-reviews")
+        final_url = "/".join(parts)
+    else:
+        final_url = shorturl
+
+    print(final_url)
+
     pagesstr = input("Enter Page Number of Review Page: ")
     pages = int(pagesstr)
     print(pages)
-    scraper = FlipkartScraper(pages, url)
+
+    scraper = FlipkartScraper(pages, final_url)
     all_reviews = scraper.iterate_over_pages()
+
     print("Done")
     print(all_reviews)
 
