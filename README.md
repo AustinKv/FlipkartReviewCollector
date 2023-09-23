@@ -1,4 +1,4 @@
-# FlipkartReviewCollector
+# FlipkartReviewCollector(OS=Win/Mac, IDE=PyCharm)
 
 System Requirements<br />
 python 3.11<br />
