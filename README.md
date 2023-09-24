@@ -1,6 +1,6 @@
 # System Requirements
-OS Win/Mac
-IDEs tried on PyCharm and VSCode
+OS Win/Mac<br />
+IDEs tried on PyCharm and VSCode<br />
 python 3.11<br />
 lxml<br />
 pyquery<br />
