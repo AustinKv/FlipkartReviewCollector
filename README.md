@@ -1,5 +1,3 @@
-# FlipkartReviewCollector
-
 # System Requirements
 OS Win/Mac
 IDEs tried on PyCharm and VSCode
