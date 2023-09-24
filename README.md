@@ -1,8 +1,9 @@
 # Introduction
-Collects user, title, date and review from any product (except products under fashion(may do it idk), and obviously travel and grocery(cause it doesnt have any reviews? duh.))
+Collects user, title, date and review from any product (except products under fashion(has a different CSS selector) and obviously travel and grocery(cause it doesnt have any reviews? duh.)) and stores all data in a .json file.
 # System Requirements
 OS Win/Mac<br />
 IDEs tried on PyCharm and VSCode<br />
+Python Modules:<br />
 python 3.11<br />
 lxml<br />
 pyquery<br />
