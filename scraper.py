@@ -26,7 +26,7 @@ class flipkartScraper:
         reviews = []
         for i in range(1, self.pages + 1):
             print(f"Page: {i}")
-            r = self.session.get(f'{self.url}&page={pages}', headers=self.headers)
+            r = self.session.get(f'{self.url}&page={i}', headers=self.headers)
             if self.has_reviews(r.html):
                 new_reviews = self.get_reviews_from_page(r.html)
                 print("New reviews!")
